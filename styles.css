@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font: 'Noto Sans'
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(69, 163, 229);
+}
+.display {
+    padding: 32px;
+    font-family: var(--font);
+}
+.centered {
+    text-align: center;
+}
+h1 {
+    width: 100%;
+    font-size: 64px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+.video-wrapper {
+    display: block;
+    padding: 24px;
+}
+iframe {
+    border: 3px silver outset;
+    box-shadow: 0px 0px 15px 4px rgb(255, 239, 151);
+    background-color: black;
+}
+.video-controls {
+    padding: 16px;
+    margin-bottom: 32px;
+}
+button {
+    padding: 6px 12px;
+    font-size: 32px;
+    border: 2px silver outset;
+    outline: none;
+    transition-duration: 350ms;
+}
+button:hover {
+    background-color: rgb(182, 201, 238);
+    cursor: pointer;
+}
+button:active {
+    border: 2px silver inset;
+}
+
+@keyframes fridayBg {
+    25% {
+        background: rgb(65, 196, 222);
+    }
+    
+    50% {
+        background: rgb(140, 199, 63);
+    }
+    
+    75% {
+        background: rgb(243, 211, 51);
+    }
+    
+    100% {
+        background: rgb(247, 142, 86);
+    }
+}
