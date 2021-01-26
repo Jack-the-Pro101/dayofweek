@@ -16,6 +16,38 @@ html {
 body {
     background-color: rgb(69, 163, 229);
 }
+.noscript-bg {
+    font-family: inherit;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.noscript-box {
+    font-family: inherit;
+    background-color: white;
+    padding: 64px;
+    text-align: center;
+    width: 75vw;
+    height: 75vh;
+}
+.noscript-box img {
+    width: 300px;
+    height: 300px;
+}
+.noscript-box h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.noscript-box p {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
 .display {
     padding: 32px;
     font-family: var(--font);
