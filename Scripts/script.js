@@ -44,6 +44,7 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
     case 1:
         day = 'Monday';
         vid.src = 'https://www.youtube.com/embed/xPaoz20eyZo?enablejsapi=1';
+
         break;
     
     case 2:
@@ -81,9 +82,9 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
     day = '???';
     alert('If you see this message, you have broken time or JavaScript. Theoretically, it is not possible for you to see this message, as the only time you can see this message is if the day is neither Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday: which is impossible. (Unless you are seeing this in the sources tab inside devtools or JS failed) Who are you to have knowledge of such wise ways?');
 
-}
+};
 
-document.getElementsByTagName('title')[0].innerHTML = `It's ${day}`
+document.getElementsByTagName('title')[0].innerHTML = `It's ${day}`;
 document.getElementById('theDay').innerHTML = day;
 
 window.onload = function() {
@@ -95,7 +96,7 @@ function playVideo() {
         player.playVideo();
         videoPlaying = true;
     },500)
-}
+};
 
 // Monday specific --------------------------------------------
 
@@ -108,10 +109,10 @@ if (day == 'Monday')
     function mondayStopwatch()
     {
         clearInterval(isVideoPlaying);
-        setTimeout(function() {
-            player.stopVideo()
-        },26000)
-    }
-}
+        setTimeout(() => {
+            player.stopVideo();
+        },26000);
+    };
+};
 
 // End of Monday specific -------------------------------------
