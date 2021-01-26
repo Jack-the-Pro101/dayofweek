@@ -37,6 +37,7 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 {
     case 0:
         day = 'Sunday';
+        vid.src = ''
 
         break;
 
@@ -72,12 +73,13 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 
     case 6:
         day = 'Saturday';
+        vid.src = ''
 
         break;
 
     default:
-    day = '???';   
-    alert('If you see this message, you have broken time or JavaScript. Theoretically, it is not possible for you to see this message, as the only time you can see this message is if the day is neither Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday: which is impossible. Who are you to have knowledge of such wise ways?');
+    day = '???';
+    alert('If you see this message, you have broken time or JavaScript. Theoretically, it is not possible for you to see this message, as the only time you can see this message is if the day is neither Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday: which is impossible. (Unless you are seeing this in the sources tab inside devtools or JS failed) Who are you to have knowledge of such wise ways?');
 
 }
 
@@ -91,15 +93,15 @@ setTimeout(function(){
 
 if (day == 'Monday')
 {
-var isVideoPlaying = setInterval(() => {
-    videoPlaying ? mondayStopwatch() : console.log('Waiting for video to play')
-}, 100);
+    var isVideoPlaying = setInterval(() => {
+        videoPlaying ? mondayStopwatch() : console.log('Waiting for video to play')
+    }, 100);
 
-function mondayStopwatch()
-{
-    setTimeout(function() {
-        player.stopVideo()
-        clearInterval(isVideoPlaying);
-    },26000)
-}
+    function mondayStopwatch()
+    {
+        setTimeout(function() {
+            player.stopVideo()
+            clearInterval(isVideoPlaying);
+        },26000)
+    }
 }
