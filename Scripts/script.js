@@ -37,7 +37,7 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 {
     case 0:
         day = 'Sunday';
-        vid.src = ''
+        vid.src = 'https://www.youtube.com/embed/D1diGfoPKqM?enablejsapi=1'
 
         break;
 
@@ -66,14 +66,14 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 
     case 5:
         day = 'Friday!!!';
-        vid.src = 'https://www.youtube.com/embed/_YxihIKAYxw?enablejsapi=1';
+        vid.src = 'https://www.youtube.com/embed/nxoe5DjDd74?enablejsapi=1';
 
         document.getElementsByTagName('body')[0].style = 'animation: 14s ease 0s infinite alternate none running fridayBg;';
         break;
 
     case 6:
         day = 'Saturday';
-        vid.src = ''
+        vid.src = 'https://www.youtube.com/embed/gu3KzCWoons?enablejsapi=1'
 
         break;
 
@@ -99,9 +99,9 @@ if (day == 'Monday')
 
     function mondayStopwatch()
     {
+        clearInterval(isVideoPlaying);
         setTimeout(function() {
             player.stopVideo()
-            clearInterval(isVideoPlaying);
         },26000)
     }
 }
