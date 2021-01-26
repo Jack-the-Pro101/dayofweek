@@ -86,15 +86,23 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 document.getElementsByTagName('title')[0].innerHTML = `It's ${day}`
 document.getElementById('theDay').innerHTML = day;
 
-setTimeout(function(){
-    player.playVideo();
-    videoPlaying = true;
-},1500)
+window.onload = function() {
+    playVideo();
+};
+  
+function playVideo() {
+    setTimeout(function(){
+        player.playVideo();
+        videoPlaying = true;
+    },500)
+}
+
+// Monday specific --------------------------------------------
 
 if (day == 'Monday')
 {
     var isVideoPlaying = setInterval(() => {
-        videoPlaying ? mondayStopwatch() : console.log('Waiting for video to play')
+        videoPlaying ? mondayStopwatch() : console.log('Waiting for video to play');
     }, 100);
 
     function mondayStopwatch()
@@ -105,3 +113,5 @@ if (day == 'Monday')
         },26000)
     }
 }
+
+// End of Monday specific -------------------------------------
