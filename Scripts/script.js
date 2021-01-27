@@ -50,7 +50,7 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 {
     case 0:
         day = 'Sunday';
-        vid.src = 'https://www.youtube.com/embed/D1diGfoPKqM?enablejsapi=1'
+        vid.src = 'https://www.youtube.com/embed/D1diGfoPKqM?enablejsapi=1';
 
         break;
 
@@ -69,6 +69,7 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
     
     case 2:
         day = 'Tuesday';
+
         vid.src = 'https://www.youtube.com/embed/CY8a4uh_PdI?enablejsapi=1';
 
         break;
