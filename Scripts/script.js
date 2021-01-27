@@ -33,6 +33,17 @@ var day;
 var vid = document.getElementById('video');
 var videoPlaying = false;
 
+if (window.innerWidth < 666 && window.innerWidth > 550)
+{
+    vid.height = '234';
+    vid.width = '416';
+}
+if (window.innerWidth > 1000)
+{
+    vid.height = '504';
+    vid.width = '896';
+}
+
 switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 {
     case 0:
@@ -95,6 +106,13 @@ function playVideo() {
     setTimeout(function(){
         player.playVideo();
         videoPlaying = true;
+
+        
+        if (window.innerWidth < 550)
+        {
+            vid.height = '171';
+            vid.width = '304';
+        }
     },500)
 };
 
