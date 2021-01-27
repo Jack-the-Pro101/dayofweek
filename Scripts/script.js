@@ -44,6 +44,8 @@ if (window.innerWidth > 1000)
     vid.width = '896';
 }
 
+let randomNum = Math.floor(Math.random() * 2 ) + 1;
+
 switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 {
     case 0:
@@ -54,25 +56,40 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 
     case 1:
         day = 'Monday';
-        vid.src = 'https://www.youtube.com/embed/xPaoz20eyZo?enablejsapi=1';
+
+        if (randomNum == 1)
+        {
+            vid.src = 'https://www.youtube.com/embed/xPaoz20eyZo?enablejsapi=1';   
+        }else if (randomNum == 2)
+        {
+            vid.src = 'https://www.youtube.com/embed/H9ykl-rFkIM?enablejsapi=1';
+        }
 
         break;
     
     case 2:
         day = 'Tuesday';
-        vid.src = 'https://www.youtube.com/embed/CY8a4uh_PdI?enablejsapi=1'
+        vid.src = 'https://www.youtube.com/embed/CY8a4uh_PdI?enablejsapi=1';
 
         break;
 
     case 3:
         day = 'Wednesday';
-        vid.src = 'https://www.youtube.com/embed/PE8GlPpuLuY?enablejsapi=1'
+
+        if (randomNum == 1)
+        {
+            vid.src = 'https://www.youtube.com/embed/PE8GlPpuLuY?enablejsapi=1';    
+        }else if (randomNum == 2)
+        {
+            vid.src = 'https://www.youtube.com/embed/PAnKl7862qc?enablejsapi=1';
+        }
+        
 
         break;
 
     case 4:
         day = 'Thursday';
-        vid.src = 'https://www.youtube.com/embed/3IxkRXHfslQ?enablejsapi=1'
+        vid.src = 'https://www.youtube.com/embed/3IxkRXHfslQ?enablejsapi=1';
 
         break;
 
@@ -85,7 +102,7 @@ switch (date.getDay()) // 0 is Sunday, 6 is Saturday
 
     case 6:
         day = 'Saturday';
-        vid.src = 'https://www.youtube.com/embed/gu3KzCWoons?enablejsapi=1'
+        vid.src = 'https://www.youtube.com/embed/gu3KzCWoons?enablejsapi=1';
 
         break;
 
